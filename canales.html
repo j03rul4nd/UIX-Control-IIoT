@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canales</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png" >
+    <link rel="stylesheet" href="style_home.css">
+    <link rel="stylesheet" href="style_event.css">
+    <link rel="stylesheet" href="style_canales.css">
+    <script type="text/javascript" src = "script.js"></script>
+</head>
+
+<body>
+    <header>HOME</header>
+
+    <div class="sidebar">
+        <h1 onclick="location.href='home.html'">Zentinel MDS</h1>
+        <a href="home.html">Home</a>
+        <a href="">Grafana</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="canales.html">Canales</a>
+        <a href="ajustes.html">Ajustes</a>
+        <a href="ayuda.html">Ayuda</a>
+    </div>
+
+    <div class="home">
+        <div class="apartados">
+            <div class="titulo_and_fav">
+                            <label class="fecha_titulo">Canales 1</label> 
+                            <input  type="checkbox" name="" id="btn_fav_canal_1"> 
+                            <label class="fav_canal" for="btn_fav_canal_1"></label>
+                          
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Nombre</div>
+                <input class="inputs_events" type="text" name="" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Id canal</div>
+                <input disabled="disabled" class="id_canal" value="Kcac5" list="text" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Lógica</div>
+                <select class="inputs_events" name="" id="btn_logica">
+                    <option>Normal</option>
+                    <option>Invertida</option>
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Dirección</div>
+                <select disabled="disabled" class="inputs_events" name="" id="btn_logica">
+                    <option>Entrada</option>
+                    <option>Salida</option>
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div  class="sub">Unidades</div>
+                <select  class="btn_value" id="">
+                    <option value="mm">mm</option>
+                    <option value="°C">°C</option>
+                    <option value="Digital">Digital</option>
+                    
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Factor</div>
+                <input class="inputs_events" type="number" name="" id="">
+            </div>
+            <div class="form_fech">
+                <div class="sub">Offset</div>
+                <input class="inputs_events" type="number" name="" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Cargar</div>
+                <label class="btn_file_canal"  for="canal_can_1"><span>&#8613;</span> Archivo Can</label>
+                <input accept=".can" type="file"  accept=".can"  accept=".can"  accept=".can"  accept=".can"  accept=".can"  accept=".can"  accept=".can"  accept=".can"  accept=".can"  accept=".can"  accept=".can" id="canal_can_1" name="myfile">
+            </div>
+            <div class="form_estado_manu">
+                <!-- <div class="sub_text">Ajuste Manual</div> -->
+                <div class="inicio">
+                    <label>Valor leido</label> 
+                        <input disabled="disabled" type="text" name="" value="0" id="btn_estado_events_real_time">
+                </div>
+                <div class="inicio">                
+                        <label>Valor actual</label> 
+                        <input type="text" disabled="disabled" value="193" name="" class="valor_actual_output">
+                </div>
+            </div>
+        </div>
+        <div class="apartados">
+            <div class="titulo_and_fav">
+                <label class="fecha_titulo">Canales 2</label> 
+                <input  type="checkbox" name="" id="btn_fav_canal_2"> 
+                <label class="fav_canal" for="btn_fav_canal_2"></label>
+              
+</div>
+
+            <div class="form_fech">
+                <div class="sub">Nombre</div>
+                <input class="inputs_events" type="text" name="" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Id canal</div>
+                <input disabled="disabled" class="id_canal" value="Kcac5" list="text" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Lógica</div>
+                <select class="inputs_events" name="" id="btn_logica">
+                    <option>Normal</option>
+                    <option>Invertida</option>
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Dirección</div>
+                <select disabled="disabled" class="inputs_events" name="" id="btn_logica">
+                    <option>Entrada</option>
+                    <option>Salida</option>
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div  class="sub">Unidades</div>
+                <select  class="btn_value" id="">
+                    <option value="mm">mm</option>
+                    <option value="°C">°C</option>
+                    <option value="Digital">Digital</option>
+                    
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Factor</div>
+                <input class="inputs_events" type="number" name="" id="">
+            </div>
+            <div class="form_fech">
+                <div class="sub">Offset</div>
+                <input class="inputs_events" type="number" name="" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Cargar</div>
+                <label class="btn_file_canal"  for="canal_can_1"><span>&#8613;</span> Archivo Can</label>
+                <input  type="file"  accept=".can"  accept=".can" id="canal_can_1" name="myfile">
+            </div>
+            <div class="form_estado_manu">
+                <!-- <div class="sub_text">Ajuste Manual</div> -->
+                <div class="inicio">
+                    <label>Valor leido</label> 
+                        <input disabled="disabled" type="text" name="" value="0" id="btn_estado_events_real_time">
+                </div>
+                <div class="inicio">                
+                        <label>Valor actual</label> 
+                        <input type="text" disabled="disabled" value="193" name="" class="valor_actual_output">
+                </div>
+            </div>
+        </div>
+        <div class="apartados">
+            <div class="titulo_and_fav">
+                <label class="fecha_titulo">Canales 3</label> 
+                <input  type="checkbox" name="" id="btn_fav_canal_3"> 
+                <label class="fav_canal" for="btn_fav_canal_3"></label>
+              
+</div>
+
+            <div class="form_fech">
+                <div class="sub">Nombre</div>
+                <input class="inputs_events" type="text" name="" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Id canal</div>
+                <input disabled="disabled" class="id_canal" value="Kcac5" list="text" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Lógica</div>
+                <select class="inputs_events" name="" id="btn_logica">
+                    <option>Normal</option>
+                    <option>Invertida</option>
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Dirección</div>
+                <select disabled="disabled" class="inputs_events" name="" id="btn_logica">
+                    <option>Entrada</option>
+                    <option>Salida</option>
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div  class="sub">Unidades</div>
+                <select  class="btn_value" id="">
+                    <option value="mm">mm</option>
+                    <option value="°C">°C</option>
+                    <option value="Digital">Digital</option>
+                    
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Factor</div>
+                <input class="inputs_events" type="number" name="" id="">
+            </div>
+            <div class="form_fech">
+                <div class="sub">Offset</div>
+                <input class="inputs_events" type="number" name="" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Cargar</div>
+                <label class="btn_file_canal"  for="canal_can_1"><span>&#8613;</span> Archivo Can</label>
+                <input  type="file"  accept=".can"  accept=".can" id="canal_can_1" name="myfile">
+            </div>
+            <div class="form_estado_manu">
+                <!-- <div class="sub_text">Ajuste Manual</div> -->
+                <div class="inicio">
+                    <label>Valor leido</label> 
+                        <input disabled="disabled" type="text" name="" value="0" id="btn_estado_events_real_time">
+                </div>
+                <div class="inicio">                
+                        <label>Valor actual</label> 
+                        <input type="text" disabled="disabled" value="193" name="" class="valor_actual_output">
+                </div>
+            </div>
+        </div>
+        <div class="apartados">
+            <div class="titulo_and_fav">
+                <label class="fecha_titulo">Canales 4</label> 
+                <input  type="checkbox" name="" id="btn_fav_canal_4"> 
+                <label class="fav_canal" for="btn_fav_canal_4"></label>
+              
+</div>
+
+            <div class="form_fech">
+                <div class="sub">Nombre</div>
+                <input class="inputs_events" type="text" name="" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Id canal</div>
+                <input disabled="disabled" class="id_canal" value="Kcac5" list="text" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Lógica</div>
+                <select class="inputs_events" name="" id="btn_logica">
+                    <option>Normal</option>
+                    <option>Invertida</option>
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Dirección</div>
+                <select disabled="disabled" class="inputs_events" name="" id="btn_logica">
+                    <option>Entrada</option>
+                    <option>Salida</option>
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div  class="sub">Unidades</div>
+                <select  class="btn_value" id="">
+                    <option value="mm">mm</option>
+                    <option value="°C">°C</option>
+                    <option value="Digital">Digital</option>
+                    
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Factor</div>
+                <input class="inputs_events" type="number" name="" id="">
+            </div>
+            <div class="form_fech">
+                <div class="sub">Offset</div>
+                <input class="inputs_events" type="number" name="" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Cargar</div>
+                <input  type="file"  accept=".can"  accept=".can"  id="canal_can_1" name="myfile" >
+                <label class="btn_file_canal"  for="canal_can_1"><span>&#8613;</span> Archivo Can</label>
+            </div>
+            <div class="form_estado_manu">
+                <!-- <div class="sub_text">Ajuste Manual</div> -->
+                <div class="inicio">
+                    <label>Valor leido</label> 
+                        <input disabled="disabled" type="text" name="" value="0" id="btn_estado_events_real_time">
+                </div>
+                <div class="inicio">                
+                        <label>Valor actual</label> 
+                        <input type="text" disabled="disabled" value="193" name="" class="valor_actual_output">
+                </div>
+            </div>
+        </div>
+        <div class="apartados">
+            <div class="titulo_and_fav">
+                <label class="fecha_titulo">Canales 5</label> 
+                <input  type="checkbox" name="" id="btn_fav_canal_5"> 
+                <label class="fav_canal" for="btn_fav_canal_5"></label>
+              
+</div>
+
+            <div class="form_fech">
+                <div class="sub">Nombre</div>
+                <input class="inputs_events" type="text" name="" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Id canal</div>
+                <input disabled="disabled" class="id_canal" value="Kcac5" list="text" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Lógica</div>
+                <select class="inputs_events" name="" id="btn_logica">
+                    <option>Normal</option>
+                    <option>Invertida</option>
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Dirección</div>
+                <select disabled="disabled" class="inputs_events" name="" id="btn_logica">
+                    <option>Entrada</option>
+                    <option>Salida</option>
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div  class="sub">Unidades</div>
+                <select  class="btn_value" id="">
+                    <option value="mm">mm</option>
+                    <option value="°C">°C</option>
+                    <option value="Digital">Digital</option>
+                    
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Factor</div>
+                <input class="inputs_events" type="number" name="" id="">
+            </div>
+            <div class="form_fech">
+                <div class="sub">Offset</div>
+                <input class="inputs_events" type="number" name="" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Cargar</div>
+                <label class="btn_file_canal"  for="canal_can_1"><span>&#8613;</span> Archivo Can</label>
+                <input  type="file"  accept=".can"  accept=".can" id="canal_can_1" name="myfile">
+            </div>
+            <div class="form_estado_manu">
+                <!-- <div class="sub_text">Ajuste Manual</div> -->
+                <div class="inicio">
+                    <label>Valor leido</label> 
+                        <input disabled="disabled" type="text" name="" value="0" id="btn_estado_events_real_time">
+                </div>
+                <div class="inicio">                
+                        <label>Valor actual</label> 
+                        <input type="text" disabled="disabled" value="193" name="" class="valor_actual_output">
+                </div>
+            </div>
+        </div>
+        <div class="apartados">
+            <div class="titulo_and_fav">
+                <label class="fecha_titulo">Canales 6</label> 
+                <input  type="checkbox" name="" id="btn_fav_canal_6"> 
+                <label class="fav_canal" for="btn_fav_canal_6"></label>
+              
+</div>
+
+            <div class="form_fech">
+                <div class="sub">Nombre</div>
+                <input class="inputs_events" type="text" name="" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Id canal</div>
+                <input disabled="disabled" class="id_canal" value="Kcac5" list="text" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Lógica</div>
+                <select class="inputs_events" name="" id="btn_logica">
+                    <option>Normal</option>
+                    <option>Invertida</option>
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Dirección</div>
+                <select disabled="disabled" class="inputs_events" name="" id="btn_logica">
+                    <option>Entrada</option>
+                    <option>Salida</option>
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div  class="sub">Unidades</div>
+                <select  class="btn_value" id="">
+                    <option value="mm">mm</option>
+                    <option value="°C">°C</option>
+                    <option value="Digital">Digital</option>
+                    
+                </select>
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Factor</div>
+                <input class="inputs_events" type="number" name="" id="">
+            </div>
+            <div class="form_fech">
+                <div class="sub">Offset</div>
+                <input class="inputs_events" type="number" name="" id="">
+            </div>
+
+            <div class="form_fech">
+                <div class="sub">Cargar</div>
+                <label class="btn_file_canal"  for="canal_can_1"><span>&#8613;</span> Archivo Can</label>
+                <input  type="file"  accept=".can"  accept=".can"  accept=".can"  accept=".can" id="canal_can_1" name="myfile">
+            </div>
+            <div class="form_estado_manu">
+                <!-- <div class="sub_text">Ajuste Manual</div> -->
+                <div class="inicio">
+                    <label>Valor leido</label> 
+                        <input disabled="disabled" type="text" name="" value="0" id="btn_estado_events_real_time">
+                </div>
+                <div class="inicio">                
+                        <label>Valor actual</label> 
+                        <input type="text" disabled="disabled" value="193" name="" class="valor_actual_output">
+                </div>
+            </div>
+        </div>
+        <div class="apartados" id="apartado_save">
+            <div class="guardado">
+                <input type="button" id="btn_guardar_cambios" value="Guardar cambios">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

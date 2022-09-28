@@ -1,0 +1,155 @@
+.id_canal {
+    margin-right: 5px;
+    line-height: 32px;
+    font-weight: 700;
+    opacity: 0.49;
+    text-align: center;
+    border: none;
+}
+.btn_value{
+    background-color: #00000033;
+    border-radius: 5px 5px 0px 0px;
+    border: none;
+    border-bottom: 1px solid black;
+    text-align: center;
+    color: black;
+    width: 166.4px;
+}
+
+body{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 4000% 4000%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.form_fech label span {
+    font-weight: 900;
+    /* opacity: 0.9; */
+    margin-right: 5px;
+}
+/* file input 1*/
+#canal_can_1,
+#canal_can_2,
+#canal_can_3,
+#canal_can_4,
+#canal_can_5,
+#canal_can_6{
+    display: none;
+}
+
+.btn_file_canal{
+    background-color: #005ff933;
+    border-radius: 5px 5px 0px 0px;
+    border: none;
+    border-bottom: 1px solid black;
+    text-align: center;
+    color: black;
+    width: 166.4px;
+}
+
+
+
+.valor_actual_output:hover{
+    border:none
+}
+.valor_actual_output {
+    opacity: 0.59;
+    border: none;
+    width: 143.4px;
+    content: center;
+    width: 67px;
+}
+.form_estado_manu {
+    margin-top: 15px;
+}
+#apartado_save {
+    padding: 6px;
+    margin-top: 5px;
+    margin-bottom: 14px;
+    background: none;
+    width: 100%;
+}
+
+
+/* input checked file */
+/* #canal_can_1:checked~ .btn_file_canal:after{
+    background:red;
+ } */
+
+ /* .fav_canal::before{
+    content: "•";
+ } */
+
+ /* fav btn */
+ /* titulo y label flex */
+.titulo_and_fav {
+    justify-content: center;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+/* hacer invisible el inputdel fav */
+#btn_fav_canal_1,
+#btn_fav_canal_2,
+#btn_fav_canal_3,
+#btn_fav_canal_4,
+#btn_fav_canal_5,
+#btn_fav_canal_6{
+    display: none;
+}
+/* cambio de color en cheked */
+#btn_fav_canal_1:checked ~ .fav_canal,
+#btn_fav_canal_2:checked ~ .fav_canal,
+#btn_fav_canal_3:checked ~ .fav_canal,
+#btn_fav_canal_4:checked ~ .fav_canal,
+#btn_fav_canal_5:checked ~ .fav_canal,
+#btn_fav_canal_6:checked ~ .fav_canal
+{
+    color: #61A0FF;
+}
+/* cambio de icono */
+#btn_fav_canal_1:checked ~ .fav_canal:after,
+#btn_fav_canal_2:checked ~ .fav_canal:after,
+#btn_fav_canal_3:checked ~ .fav_canal:after,
+#btn_fav_canal_4:checked ~ .fav_canal:after,
+#btn_fav_canal_5:checked ~ .fav_canal:after,
+#btn_fav_canal_6:checked ~ .fav_canal:after{
+    content: "\2605";
+    font-size: 20px;
+}
+/* icono sin favorito checked */
+.fav_canal:after{
+    content: '\2606';
+    transition: 0.3s;
+    font-size: 20px;
+}
+/* tamaño de iconos */
+.fav_canal{
+    height: 31px;
+}
+
+
+/* Scroll */
+body::-webkit-scrollbar{    
+    background: grey;
+}
+body::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 10px;
+}
+
+  
+
+  

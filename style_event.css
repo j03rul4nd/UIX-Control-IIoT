@@ -1,0 +1,57 @@
+.form_estado_manu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#btn_estado_events_real_time{
+    opacity: 0.59;
+    border: none;
+    width: 63px;
+}
+.inicio{
+    width: 166px;
+}
+.inputs_events {
+    background-color: #00000033;
+    border-radius: 5px 5px 0px 0px;
+    border: none;
+    border-bottom: 1px solid black;
+    text-align: center;
+    color: black;
+    /* font-size: 14px; */
+}
+#btn_logica{
+    width: 166.4px;
+}
+/* apartado responsive auto */
+.home{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    background: rgb(255, 255, 255, 0.5);
+    width: 500px;
+    left: 264px;
+    right: 21px;
+    border-radius: 21px;
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    gap: 0px;
+    width: auto;
+    height: auto;
+    justify-content:center;
+}
+.apartados {
+    background: #fff;
+    margin: 10px;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+}
+body::-webkit-scrollbar{    
+    background: grey;
+}
+  
+body::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 10px;
+}

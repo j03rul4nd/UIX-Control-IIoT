@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png" >
+    <link rel="stylesheet" href="style_home.css">
+    <script type="text/javascript" src = "script.js"></script>
+</head>
+
+<body>
+    <header>HOME</header>
+
+    <div class="sidebar">
+        <h1 onclick="location.href='home.html'">Zentinel MDS</h1>
+        <a href="home.html">Home</a>
+        <a href="">Grafana</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="canales.html">Canales</a>
+        <a href="ajustes.html">Ajustes</a>
+        <a href="ayuda.html">Ayuda</a>
+    </div>
+
+    <div class="home">
+        <div class="apartados">
+            <label class="fecha_titulo">Fecha y Hora</label>
+            <div class="form_fech">
+                <div class="sub_text">Ajustes Automático SNTP</div>
+                <input type="checkbox" name="" id="">
+            </div>
+            <div class="form_fech_manu">
+                <div class="sub_text">Ajuste Manual</div>
+                <div class="inicio">
+                    <label>Fecha</label> 
+                        <input type="date" name="" id="inicio_csv_manual">
+                </div>
+                <div class="final">                
+                        <label>Hora</label> 
+                        <input type="time" name="" id="final_csv_manual">
+                </div>
+            </div>
+        </div>
+
+        <div class="apartados">
+            <div class="influx_form">
+                <Label>Registro MDS</Label>
+                <input type="checkbox" name="" id="">
+            </div>
+
+        </div>
+        <div class="apartados">
+            <div class="informes">
+                <div class="titulo_info_csv">Informe CSV</div>
+
+                <div class="informe_auto">
+                    <div class="informe_text">
+                        <div class="sub">Informe Automático Diario</div>
+                        <input type="time" name="" id="tiempo_csv_auto">
+                    </div>
+                    <div class="informe_btn">
+                        <input type="checkbox" name="" id="">
+                    </div>
+                </div>
+                <div class="informe_manual">
+                    <div class="informe_manual_text">        
+                        <div class="sub">Informe Manual</div>
+                        <div class="inicio">
+                            <label>Inicio</label> 
+                                <input type="date" name="" id="inicio_csv_manual">
+                        </div>
+
+                        <div class="final">                
+                            <label>Final</label> 
+                                <input type="date" name="" id="final_csv_manual">
+                        </div>
+                    </div>
+                    <div class="informe_manual_btn">
+                        <input type="button" id="btn_run_informe_manual" value="run">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="apartados" id="apartado_save">
+            <div class="guardado">
+                <input type="button" id="btn_guardar_cambios" value="Guardar cambios">
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
