@@ -4,55 +4,119 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Control de estados</title>
     <!-- Libreria jquery -->
     <script type="text/javascript" src = "jquery.js"></script>
 </head>
-<body>
+<body>    
     <div class="settings">
+        <!-- Maquina 1 -->
         <div class="config">
-            <select id="value_entrada_2">
-            <option value = 1 >Yes</option>
-            <option value = 0 >No</option>
-            </select>
-        <div id="btn_envio_value" onclick="Func_entrada_2();">ENVIAR CAMBIOS</div>
-        </div>    
+            <div class="titulo">Máquina 1</div>
+            <div class="input_maquina_1">
+                <span>Valor Real</span>
+                <input disabled="disabled" type="number" id="valor_number_maquina_1">
+            </div>
+        </div> 
+        <!-- Maquina 2 -->
+        <div class="config">
+            <div class="titulo">Máquina 2</div>
+            <div class="input_maquina_2">
+                <select id="value_entrada_2">
+                    <option value = 1 >Yes</option>
+                    <option value = 0 >No</option>
+                </select>
+                <div id="btn_envio_value">ENVIAR CAMBIOS</div>                
+            </div>
+        </div> 
+
+        <!-- Maquina 3 -->
+        <div class="config">
+            <div class="labe_1">
+                <div class="titulo">Máquina 3</div>
+                <div class="estado_maq">
+                    <span>Estado:</span>
+                    <div class="value_maq_3" id="valor_number_maquina_3">NULL</div>
+                </div>
+            </div>
+            <div class="input_maquina_3">
+                <input type="checkbox" name="" id="value_entrada_3">
+                <button id="enviar_datos_maquina_3">Enviar</button>
+            </div>
+        </div>   
     </div>
 
     
 <script>
     //solicitamos los datos de node_red
     function func_llamada_de_datos(){
-        $.post('http://localhost:1880/entrada_1', {  }, function(resp){
+        $.post('http://localhost:1880/valor_entrada_1_y_3', {  }, function(resp){
             var r = JSON.parse(JSON.stringify(resp));
             var entrada_1 = r['Entrada_1']; 
-            document.getElementById('entrada_1_value').innerHTML = entrada_1;
+            var entrada_3 = r['Entrada_3'];
+            document.getElementById('valor_number_maquina_1').innerHTML = entrada_1;
+            document.getElementById('valor_number_maquina_3').innerHTML = entrada_3;
+
         }, "json"); 
     }
     setTimeout(llamada_de_datos, 15000);// cada 15 segundos se refrescaran los datos
-
-
-
-
-
-    //envio de datos a node-red     
-    $('#btn_marcha').click(function() {
-            var data_time={ };
-            valor_input_time = document.getElementById('input_time_inicio').value;
-            data_time = {   
-                //contenido que enviamos a node-red                          
-                    '"time_minuts"': 'm',
-                    '"marcha_btn"': 1,
+    //envio de datos a node-red  
+    //maquina 2   
+    $('#btn_envio_value').click(function() {
+            var data_maq_2={ };
+            valor_input_maq_2 = document.getElementById('value_entrada_2').value;
+            data_maq_2 = {   
+                //contenido que enviamos a node-red   
+                    //podemos enviar valores de estas formas tambien:                       
+                    // '"time_minuts"': 'm', 
+                    // '"marcha_btn"': 1,
+                    'Maquina_2': valor_input_maq_2,
                 }
             
             $.ajax({
                     type: 'POST',
                     url: 'http://localhost:8080/datos/',
-                    data: data_time,
+                    data: data_maq_2,
+                })         
+            return false;
+        });
+    //maquina 3
+    $('#enviar_datos_maquina_3').click(function() {
+            var data_maq_3={ };
+            valor_input_maq_3 = document.getElementById('value_entrada_3').value;
+            data_maq_3 = {   
+                //contenido que enviamos a node-red                          
+                    //'"time_minuts"': 'm',
+                    //'"marcha_btn"': 1,
+                    'Maquina_3':valor_input_maq_3,
+                }
+            
+            $.ajax({
+                    type: 'POST',
+                    url: 'http://localhost:8080/datos/',
+                    data: data_maq_3,
                 })         
             return false;
         });
 </script>
-
+<style>
+    @import url('http://fonts.googleapis.com/css?family=Roboto');
+    body {
+        background: #ECECEE;
+        font-family: 'Roboto', sans-serif;
+    }
+    /* .settings{
+        display: flex;
+    } */
+    .config{
+        background: white;
+        border: 1px solid white;
+        border-radius: 4px;
+    }
+    .titulo{
+        line-height: 32px;
+        font-weight: 700;
+    }
+</style>
 </body>
 </html>
