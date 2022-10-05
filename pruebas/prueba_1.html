@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Libreria jquery -->
+    <script type="text/javascript" src = "jquery.js"></script>
+</head>
+<body>
+    <div class="settings">
+        <div class="config">
+            <select id="value_entrada_2">
+            <option value = 1 >Yes</option>
+            <option value = 0 >No</option>
+            </select>
+        <div id="btn_envio_value" onclick="Func_entrada_2();">ENVIAR CAMBIOS</div>
+        </div>    
+    </div>
+
+    
+<script>
+    //solicitamos los datos de node_red
+    function func_llamada_de_datos(){
+        $.post('http://localhost:1880/entrada_1', {  }, function(resp){
+            var r = JSON.parse(JSON.stringify(resp));
+            var entrada_1 = r['Entrada_1']; 
+            document.getElementById('entrada_1_value').innerHTML = entrada_1;
+        }, "json"); 
+    }
+    setTimeout(llamada_de_datos, 15000);// cada 15 segundos se refrescaran los datos
+
+
+
+
+
+    //envio de datos a node-red     
+    $('#btn_marcha').click(function() {
+            var data_time={ };
+            valor_input_time = document.getElementById('input_time_inicio').value;
+            data_time = {   
+                //contenido que enviamos a node-red                          
+                    '"time_minuts"': 'm',
+                    '"marcha_btn"': 1,
+                }
+            
+            $.ajax({
+                    type: 'POST',
+                    url: 'http://localhost:8080/datos/',
+                    data: data_time,
+                })         
+            return false;
+        });
+</script>
+
+</body>
+</html>
