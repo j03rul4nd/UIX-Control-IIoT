@@ -10,59 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>    
-    <script>
-        //solicitamos los datos de node_red
-            // maquina 1 y 3
-        function func_llamada_de_datos(){
-            $.post('http://192.168.3.17:1880/valor_entrada_1_y_3', {  }, function(resp){
-                var r = JSON.parse(JSON.stringify(resp));
-                var entrada_1 = r['Entrada_1']; 
-                var entrada_3 = r['Entrada_3'];
-                document.getElementById('valor_number_maquina_1').innerHTML = entrada_1;
-                document.getElementById('valor_number_maquina_3').innerHTML = entrada_3;
 
-            }, "json"); 
-        }
-        setTimeout(func_llamada_de_datos, 1500);// cada 15 segundos se refrescaran los datos
-        //envio de datos a node-red  
-            //maquina 2   
-            $('#btn_envio_value').click(function() {
-                var data_maq_2={ };
-                valor_input_maq_2 = document.getElementById('value_entrada_2').value;
-                data_maq_2 = {   
-                    //contenido que enviamos a node-red   
-                        //podemos enviar valores de estas formas tambien:                       
-                        // '"time_minuts"': 'm', 
-                        // '"marcha_btn"': 1,
-                        'Maquina_2': valor_input_maq_2,// 1 o 0
-                    }
-                
-                $.ajax({
-                        type: 'POST',
-                        url: 'http://192.168.3.17:8080/datos/',
-                        data: data_maq_2,
-                    })         
-                return false;
-            });
-            //maquina 3
-            $('#enviar_datos_maquina_3').click(function() {
-                var data_maq_3={ };
-                valor_input_maq_3 = document.getElementById('value_entrada_3').checked;;
-                data_maq_3 = {   
-                    //contenido que enviamos a node-red                          
-                        //'"time_minuts"': 'm',
-                        //'"marcha_btn"': 1,
-                        'Maquina_3':valor_input_maq_3,// on / off
-                    }
-                
-                $.ajax({
-                        type: 'POST',
-                        url: 'http://192.168.3.17:8080/datos/',
-                        data: data_maq_3,
-                    })         
-                return false;
-            });
-    </script>
     <style>
         @import url('http://fonts.googleapis.com/css?family=Roboto');
         body {
@@ -190,5 +138,79 @@
         </div>
     </div>   
 </div> 
+    <script>
+        //solicitamos los datos de node_red
+            // maquina 1 y 3
+            //primer scan OB100 
+        function func_ob100(){
+            $.post('http://192.168.3.17:1880/valor_entrada_1_y_3', {  }, function(resp){
+                var r = JSON.parse(JSON.stringify(resp));
+                var entrada_1 = r['Entrada_1']; 
+                var entrada_3 = r['Entrada_3'];
+                document.getElementById('valor_number_maquina_1').value = entrada_1;
+                document.getElementById('valor_number_maquina_3').innerHTML = entrada_3;
+                if(entrada_3 == "true"){
+                    document.getElementById('value_entrada_3').checked = true;
+                }
+                if(entrada_3 == "false"){
+                    document.getElementById('value_entrada_3').checked = false;
+                }
+                
+
+            }, "json"); 
+        }
+        setTimeout(func_ob100, 1500);
+        function func_llamada_de_datos(){
+            $.post('http://192.168.3.17:1880/valor_entrada_1_y_3', {  }, function(resp){
+                var r = JSON.parse(JSON.stringify(resp));
+                var entrada_1 = r['Entrada_1']; 
+                var entrada_3 = r['Entrada_3'];
+                document.getElementById('valor_number_maquina_1').value = entrada_1;
+                document.getElementById('valor_number_maquina_3').innerHTML = entrada_3;
+
+            }, "json"); 
+            setTimeout(func_llamada_de_datos, 1500);
+        }
+        setTimeout(func_llamada_de_datos, 1500);// cada 15 segundos se refrescaran los datos
+        //envio de datos a node-red  
+            //maquina 2   
+            $('#btn_envio_value').click(function() {
+                var data_maq_2={ };
+                valor_input_maq_2 = document.getElementById('value_entrada_2').value;
+                data_maq_2 = {   
+                    //contenido que enviamos a node-red   
+                        //podemos enviar valores de estas formas tambien:                       
+                        // '"time_minuts"': 'm', 
+                        // '"marcha_btn"': 1,
+                        'Maquina_2': valor_input_maq_2,// 1 o 0
+                    }
+                
+                $.ajax({
+                        type: 'POST',
+                        url: 'http://192.168.3.17:1880/datos/',
+                        data: data_maq_2,
+                    })         
+                // return false;
+            });
+            //maquina 3
+            $('#enviar_datos_maquina_3').click(function() {
+                var data_maq_3={ };
+                valor_input_maq_3 = document.getElementById('value_entrada_3').checked;
+                data_maq_3 = {   
+                    //contenido que enviamos a node-red                          
+                        //'"time_minuts"': 'm',
+                        //'"marcha_btn"': 1,
+                        'Maquina_3':valor_input_maq_3,// on / off
+                    }
+                
+                $.ajax({
+                        type: 'POST',
+                        url: 'http://192.168.3.17:1880/datos_mq3',
+                        data: data_maq_3,
+                    })         
+                // return false;
+            });
+    </script>
+
 </body>
 </html>
