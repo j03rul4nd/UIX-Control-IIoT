@@ -152,6 +152,9 @@ body::-webkit-scrollbar-thumb{
 
   
 /* resposive canales auto*/
+.home{
+    max-width: 965px;
+}
 .info_canales{
     display: none;
 }

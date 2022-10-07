@@ -39,6 +39,7 @@
     width: auto;
     height: auto;
     justify-content:center;
+    max-width: 965px;
 }
 .apartados {
     background: #fff;
