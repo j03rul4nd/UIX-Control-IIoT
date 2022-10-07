@@ -151,5 +151,15 @@ body::-webkit-scrollbar-thumb{
 }
 
   
+/* resposive canales auto*/
+.info_canales{
+    display: none;
+}
+:target{
+    display: block;
+}
 
-  
+a{
+    text-decoration:none;
+    color: black;
+}

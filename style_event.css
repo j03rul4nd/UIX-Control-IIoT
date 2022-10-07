@@ -46,6 +46,7 @@
     border-radius: 18px;
     padding: 20px;
     text-align: center;
+    height: fit-content;
 }
 body::-webkit-scrollbar{    
     background: grey;
@@ -55,3 +56,20 @@ body::-webkit-scrollbar-thumb{
     background: white;
     border-radius: 10px;
 }
+
+
+
+.info_event{
+    display: none;
+}
+
+:target{
+    display: block;
+}
+a{
+    text-decoration:none;
+    color: black;
+}
+
+
+

@@ -16,7 +16,7 @@
     <header>HOME</header>
 
     <div class="sidebar">
-        <h1 onclick="location.href='home.html'">Zentinel MDS</h1>
+        <h1  class="titulo_h1_sidebar" onclick="location.href='home.html'">Zentinel MDS</h1>
         <a href="home.html">Home</a>
         <a href="">Grafana</a>
         <a href="eventos.html">Eventos</a>
@@ -24,17 +24,17 @@
         <a href="ajustes.html">Ajustes</a>
         <a href="ayuda.html">Ayuda</a>
     </div>
-
+    
     <div class="home">
         <div class="apartados">
-            <label class="fecha_titulo">Evento 1</label>
+            <a href="#info_event_1" class="fecha_titulo">Evento 1</a>
 
-            <div class="form_fech">
+            <div id="info_event_1" class="info_event">
+            <div  class="form_fech">
                 <div class="sub">Nombre</div>
                 <input class="inputs_events" type="text" name="" id="">
             </div>
-
-            <div class="form_fech">
+            <div  class="form_fech">
                 <div class="sub">Canal</div>
                 <input class="inputs_events" list="in_canales" id="">
                 <datalist id="in_canales">
@@ -75,278 +75,291 @@
                 <div class="final">                
                         <label>Activado en:</label> 
                         <input type="time" disabled="disabled" value="12:00" name="" id="final_csv_manual">
+                </div>
+            </div>                
+            </div>
+
+        </div>
+
+        <div class="apartados">
+            <a href="#info_event_2" class="fecha_titulo">Evento 2</a>
+
+            <div id="info_event_2" class="info_event">
+
+                <div class="form_fech">
+                    <div class="sub">Nombre</div>
+                    <input class="inputs_events" type="text" name="" id="">
+                </div>
+
+                <div class="form_fech">
+                    <div class="sub">Canal</div>
+                    <input class="inputs_events" list="in_canales" id="">
+                    <datalist id="in_canales">
+                        <option value="canal D1"></option>
+                        <option value="canal D2"></option>
+                        <option value="analog1"></option>
+                    </datalist>
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Lógica</div>
+                    <select class="inputs_events" name="" id="btn_logica">
+                        <option>Normal</option>
+                        <option>Invertida</option>
+                    </select>
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Nivel Superior</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Nivel Inferior</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Temporizador (ms)</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Histéresis</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_estado_manu">
+                    <!-- <div class="sub_text">Ajuste Manual</div> -->
+                    <div class="inicio">
+                        <label>Estado</label> 
+                            <input disabled="disabled" type="text" name="" value="True" id="btn_estado_events_real_time">
+                    </div>
+                    <div class="final">                
+                            <label>Activado en:</label> 
+                            <input type="time" disabled="disabled" value="12:00" name="" id="final_csv_manual">
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="apartados">
-            <label class="fecha_titulo">Evento 2</label>
+            <a href="#info_event_3" class="fecha_titulo">Evento 3</a>
 
-            <div class="form_fech">
-                <div class="sub">Nombre</div>
-                <input class="inputs_events" type="text" name="" id="">
-            </div>
-
-            <div class="form_fech">
-                <div class="sub">Canal</div>
-                <input class="inputs_events" list="in_canales" id="">
-                <datalist id="in_canales">
-                    <option value="canal D1"></option>
-                    <option value="canal D2"></option>
-                    <option value="analog1"></option>
-                </datalist>
-            </div>
-            <div class="form_fech">
-                <div class="sub">Lógica</div>
-                <select class="inputs_events" name="" id="btn_logica">
-                    <option>Normal</option>
-                    <option>Invertida</option>
-                </select>
-            </div>
-            <div class="form_fech">
-                <div class="sub">Nivel Superior</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_fech">
-                <div class="sub">Nivel Inferior</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_fech">
-                <div class="sub">Temporizador (ms)</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_fech">
-                <div class="sub">Histéresis</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_estado_manu">
-                <!-- <div class="sub_text">Ajuste Manual</div> -->
-                <div class="inicio">
-                    <label>Estado</label> 
-                        <input disabled="disabled" type="text" name="" value="True" id="btn_estado_events_real_time">
+            <div id="info_event_3" class="info_event">
+                <div class="form_fech">
+                    <div class="sub">Nombre</div>
+                    <input class="inputs_events" type="text" name="" id="">
                 </div>
-                <div class="final">                
-                        <label>Activado en:</label> 
-                        <input type="time" disabled="disabled" value="12:00" name="" id="final_csv_manual">
+
+                <div class="form_fech">
+                    <div class="sub">Canal</div>
+                    <input class="inputs_events" list="in_canales" id="">
+                    <datalist id="in_canales">
+                        <option value="canal D1"></option>
+                        <option value="canal D2"></option>
+                        <option value="analog1"></option>
+                    </datalist>
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Lógica</div>
+                    <select class="inputs_events" name="" id="btn_logica">
+                        <option>Normal</option>
+                        <option>Invertida</option>
+                    </select>
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Nivel Superior</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Nivel Inferior</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Temporizador (ms)</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Histéresis</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_estado_manu">
+                    <!-- <div class="sub_text">Ajuste Manual</div> -->
+                    <div class="inicio">
+                        <label>Estado</label> 
+                            <input disabled="disabled" type="text" name="" value="True" id="btn_estado_events_real_time">
+                    </div>
+                    <div class="final">                
+                            <label>Activado en:</label> 
+                            <input type="time" disabled="disabled" value="12:00" name="" id="final_csv_manual">
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <div  class="apartados">
+            <a href="#info_event_4" class="fecha_titulo">Evento 4</a>
+            <div id="info_event_4" class="info_event">
+                <div class="form_fech">
+                    <div class="sub">Nombre</div>
+                    <input class="inputs_events" type="text" name="" id="">
+                </div>
+
+                <div class="form_fech">
+                    <div class="sub">Canal</div>
+                    <input class="inputs_events" list="in_canales" id="">
+                    <datalist id="in_canales">
+                        <option value="canal D1"></option>
+                        <option value="canal D2"></option>
+                        <option value="analog1"></option>
+                    </datalist>
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Lógica</div>
+                    <select class="inputs_events" name="" id="btn_logica">
+                        <option>Normal</option>
+                        <option>Invertida</option>
+                    </select>
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Nivel Superior</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Nivel Inferior</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Temporizador (ms)</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Histéresis</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_estado_manu">
+                    <!-- <div class="sub_text">Ajuste Manual</div> -->
+                    <div class="inicio">
+                        <label>Estado</label> 
+                            <input disabled="disabled" type="text" name="" value="True" id="btn_estado_events_real_time">
+                    </div>
+                    <div class="final">                
+                            <label>Activado en:</label> 
+                            <input type="time" disabled="disabled" value="12:00" name="" id="final_csv_manual">
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="apartados">
-            <label class="fecha_titulo">Evento 3</label>
-
-            <div class="form_fech">
-                <div class="sub">Nombre</div>
-                <input class="inputs_events" type="text" name="" id="">
-            </div>
-
-            <div class="form_fech">
-                <div class="sub">Canal</div>
-                <input class="inputs_events" list="in_canales" id="">
-                <datalist id="in_canales">
-                    <option value="canal D1"></option>
-                    <option value="canal D2"></option>
-                    <option value="analog1"></option>
-                </datalist>
-            </div>
-            <div class="form_fech">
-                <div class="sub">Lógica</div>
-                <select class="inputs_events" name="" id="btn_logica">
-                    <option>Normal</option>
-                    <option>Invertida</option>
-                </select>
-            </div>
-            <div class="form_fech">
-                <div class="sub">Nivel Superior</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_fech">
-                <div class="sub">Nivel Inferior</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_fech">
-                <div class="sub">Temporizador (ms)</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_fech">
-                <div class="sub">Histéresis</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_estado_manu">
-                <!-- <div class="sub_text">Ajuste Manual</div> -->
-                <div class="inicio">
-                    <label>Estado</label> 
-                        <input disabled="disabled" type="text" name="" value="True" id="btn_estado_events_real_time">
+            <a href="#info_event_5" class="fecha_titulo">Evento 5</a>
+            <div id="info_event_5" class="info_event">
+                <div class="form_fech">
+                    <div class="sub">Nombre</div>
+                    <input class="inputs_events" type="text" name="" id="">
                 </div>
-                <div class="final">                
-                        <label>Activado en:</label> 
-                        <input type="time" disabled="disabled" value="12:00" name="" id="final_csv_manual">
+
+                <div class="form_fech">
+                    <div class="sub">Canal</div>
+                    <input class="inputs_events" list="in_canales" id="">
+                    <datalist id="in_canales">
+                        <option value="canal D1"></option>
+                        <option value="canal D2"></option>
+                        <option value="analog1"></option>
+                    </datalist>
                 </div>
-            </div>
-        </div>
-
-        <div class="apartados">
-            <label class="fecha_titulo">Evento 4</label>
-
-            <div class="form_fech">
-                <div class="sub">Nombre</div>
-                <input class="inputs_events" type="text" name="" id="">
-            </div>
-
-            <div class="form_fech">
-                <div class="sub">Canal</div>
-                <input class="inputs_events" list="in_canales" id="">
-                <datalist id="in_canales">
-                    <option value="canal D1"></option>
-                    <option value="canal D2"></option>
-                    <option value="analog1"></option>
-                </datalist>
-            </div>
-            <div class="form_fech">
-                <div class="sub">Lógica</div>
-                <select class="inputs_events" name="" id="btn_logica">
-                    <option>Normal</option>
-                    <option>Invertida</option>
-                </select>
-            </div>
-            <div class="form_fech">
-                <div class="sub">Nivel Superior</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_fech">
-                <div class="sub">Nivel Inferior</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_fech">
-                <div class="sub">Temporizador (ms)</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_fech">
-                <div class="sub">Histéresis</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_estado_manu">
-                <!-- <div class="sub_text">Ajuste Manual</div> -->
-                <div class="inicio">
-                    <label>Estado</label> 
-                        <input disabled="disabled" type="text" name="" value="True" id="btn_estado_events_real_time">
+                <div class="form_fech">
+                    <div class="sub">Lógica</div>
+                    <select class="inputs_events" name="" id="btn_logica">
+                        <option>Normal</option>
+                        <option>Invertida</option>
+                    </select>
                 </div>
-                <div class="final">                
-                        <label>Activado en:</label> 
-                        <input type="time" disabled="disabled" value="12:00" name="" id="final_csv_manual">
+                <div class="form_fech">
+                    <div class="sub">Nivel Superior</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Nivel Inferior</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Temporizador (ms)</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Histéresis</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_estado_manu">
+                    <!-- <div class="sub_text">Ajuste Manual</div> -->
+                    <div class="inicio">
+                        <label>Estado</label> 
+                            <input disabled="disabled" type="text" name="" value="True" id="btn_estado_events_real_time">
+                    </div>
+                    <div class="final">                
+                            <label>Activado en:</label> 
+                            <input type="time" disabled="disabled" value="12:00" name="" id="final_csv_manual">
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="apartados">
-            <label class="fecha_titulo">Evento 5</label>
-
-            <div class="form_fech">
-                <div class="sub">Nombre</div>
-                <input class="inputs_events" type="text" name="" id="">
-            </div>
-
-            <div class="form_fech">
-                <div class="sub">Canal</div>
-                <input class="inputs_events" list="in_canales" id="">
-                <datalist id="in_canales">
-                    <option value="canal D1"></option>
-                    <option value="canal D2"></option>
-                    <option value="analog1"></option>
-                </datalist>
-            </div>
-            <div class="form_fech">
-                <div class="sub">Lógica</div>
-                <select class="inputs_events" name="" id="btn_logica">
-                    <option>Normal</option>
-                    <option>Invertida</option>
-                </select>
-            </div>
-            <div class="form_fech">
-                <div class="sub">Nivel Superior</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_fech">
-                <div class="sub">Nivel Inferior</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_fech">
-                <div class="sub">Temporizador (ms)</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_fech">
-                <div class="sub">Histéresis</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_estado_manu">
-                <!-- <div class="sub_text">Ajuste Manual</div> -->
-                <div class="inicio">
-                    <label>Estado</label> 
-                        <input disabled="disabled" type="text" name="" value="True" id="btn_estado_events_real_time">
+            <a href="#info_event_6" class="fecha_titulo">Evento 6</a>
+            <div id="info_event_6" class="info_event">
+                <div class="form_fech">
+                    <div class="sub">Nombre</div>
+                    <input class="inputs_events" type="text" name="" id="">
                 </div>
-                <div class="final">                
-                        <label>Activado en:</label> 
-                        <input type="time" disabled="disabled" value="12:00" name="" id="final_csv_manual">
+
+                <div class="form_fech">
+                    <div class="sub">Canal</div>
+                    <input class="inputs_events" list="in_canales" id="">
+                    <datalist id="in_canales">
+                        <option value="canal D1"></option>
+                        <option value="canal D2"></option>
+                        <option value="analog1"></option>
+                    </datalist>
                 </div>
-            </div>
-        </div>
-
-        <div class="apartados">
-            <label class="fecha_titulo">Evento 6</label>
-
-            <div class="form_fech">
-                <div class="sub">Nombre</div>
-                <input class="inputs_events" type="text" name="" id="">
-            </div>
-
-            <div class="form_fech">
-                <div class="sub">Canal</div>
-                <input class="inputs_events" list="in_canales" id="">
-                <datalist id="in_canales">
-                    <option value="canal D1"></option>
-                    <option value="canal D2"></option>
-                    <option value="analog1"></option>
-                </datalist>
-            </div>
-            <div class="form_fech">
-                <div class="sub">Lógica</div>
-                <select class="inputs_events" name="" id="btn_logica">
-                    <option>Normal</option>
-                    <option>Invertida</option>
-                </select>
-            </div>
-            <div class="form_fech">
-                <div class="sub">Nivel Superior</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_fech">
-                <div class="sub">Nivel Inferior</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_fech">
-                <div class="sub">Temporizador (ms)</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_fech">
-                <div class="sub">Histéresis</div>
-                <input class="inputs_events" type="number" name="" id="">
-            </div>
-            <div class="form_estado_manu">
-                <!-- <div class="sub_text">Ajuste Manual</div> -->
-                <div class="inicio">
-                    <label>Estado</label> 
-                        <input disabled="disabled" type="text" name="" value="True" id="btn_estado_events_real_time">
+                <div class="form_fech">
+                    <div class="sub">Lógica</div>
+                    <select class="inputs_events" name="" id="btn_logica">
+                        <option>Normal</option>
+                        <option>Invertida</option>
+                    </select>
                 </div>
-                <div class="final">                
-                        <label>Activado en:</label> 
-                        <input type="time" disabled="disabled" value="12:00" name="" id="final_csv_manual">
+                <div class="form_fech">
+                    <div class="sub">Nivel Superior</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Nivel Inferior</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Temporizador (ms)</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_fech">
+                    <div class="sub">Histéresis</div>
+                    <input class="inputs_events" type="number" name="" id="">
+                </div>
+                <div class="form_estado_manu">
+                    <!-- <div class="sub_text">Ajuste Manual</div> -->
+                    <div class="inicio">
+                        <label>Estado</label> 
+                            <input disabled="disabled" type="text" name="" value="True" id="btn_estado_events_real_time">
+                    </div>
+                    <div class="final">                
+                            <label>Activado en:</label> 
+                            <input type="time" disabled="disabled" value="12:00" name="" id="final_csv_manual">
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="apartados" id="apartado_save">
-            <div class="guardado">
-                <input type="button" id="btn_guardar_cambios" value="Guardar cambios">
-            </div>
+           <a href="#">
+                <div class="guardado">
+                    <input type="button" id="btn_guardar_cambios" value="Guardar cambios">
+                </div>
+            </a>
         </div>
 
     </div>

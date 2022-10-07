@@ -32,7 +32,7 @@ body{
    padding-top: 20px;
 }
 
-.sidebar h1{
+.sidebar .titulo_h1_sidebar{
    display: block;
    padding: 10px 20px;
    color: #fff;
@@ -254,9 +254,9 @@ body{
     background: none;
 }
 @media (max-width: 1298px) {
-   #apartado_save{
+   /* #apartado_save{
       background:rgba(255, 0, 0, 0.226);
-   }
+   } */
    .home{
       position:absolute;
    }
