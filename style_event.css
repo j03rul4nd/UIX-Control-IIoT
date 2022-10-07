@@ -40,6 +40,7 @@
     height: auto;
     justify-content:center;
     max-width: 965px;
+    align-items: center;
 }
 .apartados {
     background: #fff;
@@ -57,9 +58,6 @@ body::-webkit-scrollbar-thumb{
     background: white;
     border-radius: 10px;
 }
-
-
-
 .info_event{
     display: none;
 }
@@ -72,5 +70,52 @@ a{
     color: black;
 }
 
+/* icono de fav */
+/* titulo y label flex */
+ .fecha_titulo {
+    justify-content: center;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+/* hacer invisible el inputdel fav */
+#btn_fav_event_1,
+#btn_fav_event_2,
+#btn_fav_event_3,
+#btn_fav_event_4,
+#btn_fav_event_5,
+#btn_fav_event_6{
+    display: none;
+}
+/* cambio de color en cheked */
+#btn_fav_event_1:checked ~ .fav_event,
+#btn_fav_event_2:checked ~ .fav_event,
+#btn_fav_event_3:checked ~ .fav_event,
+#btn_fav_event_4:checked ~ .fav_event,
+#btn_fav_event_5:checked ~ .fav_event,
+#btn_fav_event_6:checked ~ .fav_event
+{
+    color: #61A0FF;
+}
+/* cambio de icono */
+#btn_fav_event_1:checked ~ .fav_event:after,
+#btn_fav_event_2:checked ~ .fav_event:after,
+#btn_fav_event_3:checked ~ .fav_event:after,
+#btn_fav_event_4:checked ~ .fav_event:after,
+#btn_fav_event_5:checked ~ .fav_event:after,
+#btn_fav_event_6:checked ~ .fav_event:after{
+    content: "\2605";
+    font-size: 20px;
+}
+/* icono sin favorito checked */
+.fav_event:after{
+    content: '\2606';
+    transition: 0.3s;
+    font-size: 20px;
+}
+/* tamaño de iconos */
+.fav_event{
+    height: 31px;
+}
 
 

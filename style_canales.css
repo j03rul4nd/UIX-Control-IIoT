@@ -92,8 +92,8 @@ body{
     content: "•";
  } */
 
- /* fav btn */
- /* titulo y label flex */
+/* fav btn */
+/* titulo y label flex */
 .titulo_and_fav {
     justify-content: center;
     display: flex;
@@ -154,6 +154,7 @@ body::-webkit-scrollbar-thumb{
 /* resposive canales auto*/
 .home{
     max-width: 965px;
+    align-items: center;
 }
 .info_canales{
     display: none;
